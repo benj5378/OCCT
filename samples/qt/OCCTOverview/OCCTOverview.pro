@@ -12,20 +12,20 @@ TARGET = OCCTOverview
 SAMPLESROOT = $$quote($$(CSF_OCCTSamplesPath)/qt)
 
 
-HEADERS   = ./src/*.h \
-            $${SAMPLESROOT}/../OCCTOverview/code/*.h
+HEADERS   = /home/bensay/Development/OCCT/samples/qt/OCCTOverview/src/*.h \
+            /home/bensay/Development/OCCT/samples/OCCTOverview/code/*.h
 
-SOURCES   = ./src/*.cxx \
-            $${SAMPLESROOT}/../OCCTOverview/code/*.cxx
+SOURCES   = /home/bensay/Development/OCCT/samples/qt/OCCTOverview/src/*.cxx \
+            /home/bensay/Development/OCCT/samples/OCCTOverview/code/*.cxx
 
-RESOURCES += $${SAMPLESROOT}/../OCCTOverview/code/Samples.qrc
-RESOURCES += ./src/OCCTOverview.qrc
+RESOURCES += /home/bensay/Development/OCCT/samples/OCCTOverview/code/Samples.qrc
+RESOURCES += /home/bensay/Development/OCCT/samples/qt/OCCTOverview/src/OCCTOverview.qrc
 
 RES_DIR   = $$quote($$(RES_DIR))
 
 INCLUDEPATH += $$quote($$(CSF_SampleSources))
 INCLUDEPATH += $$quote($$(CSF_OCCTIncludePath)) \
-               $${SAMPLESROOT}/../OCCTOverview/code
+               /home/bensay/Development/OCCT/samples/OCCTOverview/code/
 
 
 OCCT_DEFINES = $$(CSF_DEFINES)

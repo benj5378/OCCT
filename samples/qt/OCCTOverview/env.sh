@@ -2,11 +2,20 @@
 
 export aSamplePath="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+echo ${CASROOT}
+
+echo 1
+echo $(ps -o comm= $PPID)
+echo 2
+
+
 if [ -e "custom.sh" ]; then
-  source "custom.sh" $*;
+  source "./custom.sh" $*;
 fi
 
-source ${CASROOT}/bin/env.sh $*
+
+# export CASROOT=/home/bensay/Development/OCCT-lib
+source ${CASROOT}bin/env.sh $*
 
 if [ "${QTDIR}" != "" ]; then
   export PATH=${QTDIR}/bin:${PATH}
@@ -23,3 +32,5 @@ fi
 host=`uname -s`
 export STATION=$host
 export RES_DIR=${aSamplePath}/${STATION}/res
+
+echo ${RES_DIR}
